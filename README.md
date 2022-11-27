@@ -53,7 +53,8 @@ const styles = StyleSheet.create({
 
 # ProjectName
 
-```import messaging from '@react-native-firebase/messaging';
+```
+import messaging from '@react-native-firebase/messaging';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 export async function requestUserPermission() {
