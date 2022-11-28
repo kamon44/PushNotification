@@ -1,7 +1,8 @@
 # PushNotification
 # Coding
 # App.js
-```import React from 'react';
+```
+import React from 'react';
 import {useEffect}from 'react';
 import {
   SafeAreaView,
@@ -14,7 +15,7 @@ import {
 } from 'react-native';
 
 import {requestUserPermission,NotificationListner}
- from './src/utils/Pushnotification_helper.js';
+ from './เรียกไฟล์ที่สร้างขึ้น';
  
   const App = () => {
     useEffect(()=>{
@@ -116,3 +117,19 @@ export const NotificationListner=()=>{
     })
 }
 ```
+
+# Index.js
+
+```
+import {AppRegistry} from 'react-native';
+import App from './App';
+import {name as appName} from './app.json';
+import messaging from '@react-native-firebase/messaging';
+
+messaging().setBackgroundMessageHandler(async remoteMessage => {
+    console.log('Message handled in the background!', remoteMessage);
+  });
+
+AppRegistry.registerComponent(appName, () => App);
+```
+
